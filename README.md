@@ -30,4 +30,4 @@ Kiểm thử hiệu năng đối với 3 thông số sau cho trang web mà nhóm
 Thread group (users): 100/1000/10000
 Ram up: 10-100-1000
 Loop: 1
-Sau khi chạy jmeter, dựa vào Listener là View Results Tree/Grapth Results/ Aggregate Report, đưa ra các kết luận, nhận xét về kết quả đạt được cũng như giải pháp đề xuất để nâng cấp hệ thống (nếu có).
+**Sau khi chạy jmeter, dựa vào Listener là View Results Tree/Grapth Results/ Aggregate Report, đưa ra các kết luận, nhận xét về kết quả đạt được cũng như giải pháp đề xuất để nâng cấp hệ thống (nếu có)**.
