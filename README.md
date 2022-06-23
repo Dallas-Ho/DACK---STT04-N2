@@ -8,6 +8,7 @@ Testcase nào bug thì tô màu đỏ.
 Do số lượng testcase khá nhiều nên đối với phần Manual testing các thành viên phải phân chia nhau để viết testcase.
 Trong sheet "phân công" ghi rõ thành viên nào đảm nhận test chức năng nào, v.vv
 Sử dụng template đính kèm để hoàn thành phần A.
+----------------------------------------------
 B. API:
 Dựa vào trang web lựa chọn, thiết kế database cho phù hợp với dữ liệu trên web.
 Làm đầy đủ các quy trình có thể có (giống như theo tác trên web)
