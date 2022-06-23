@@ -13,15 +13,17 @@ Dựa vào trang web lựa chọn, thiết kế database cho phù hợp với d�
 Làm đầy đủ các quy trình có thể có (giống như theo tác trên web)
 Viết testcase như check status code, check value trả về, kiểm tra giá trị input, v.vv
 Chạy runner + newman 
--------------------------
+-----------------------------------------------------
 Quay video ghi lại toàn bộ quá trình chạy API step by step -> tải lên google drive và nộp link vào assignment.
 Publish collection + export file json.
 Nén file json server chứa source code 
 Tạo folder API và tải toàn bộ lên repository của nhóm.
+-----------------------------------------------------
 C. Selenium:
 Những task nào làm auto selenium trong file testcase thì note vào "Yes"
 Quay video chạy các testcase auto -> tải lên google drive và nộp link vào assignment.
 Nén file source code đồ án, tạo folder Selenium và tải toàn bộ lên  link github repository của nhóm.
+-----------------------------------------------------
 D. JMeter:
 Kiểm thử hiệu năng đối với 3 thông số sau cho trang web mà nhóm lựa chọn:
 Thread group (users): 100/1000/10000
