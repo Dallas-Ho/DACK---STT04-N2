@@ -5,9 +5,9 @@ const jwt = require('jsonwebtoken')
 
 const server = jsonServer.create()
 
-const router = jsonServer.router('./db.json')
+const router = jsonServer.router('./database.json')
 
-const db = JSON.parse(fs.readFileSync('./db.json', 'UTF-8'))
+const db = JSON.parse(fs.readFileSync('./database.json', 'UTF-8'))
 
 const middlewares = jsonServer.defaults();
 const PORT = process.env.PORT || 3000;
@@ -42,9 +42,10 @@ function isAuthenticated({email, password}){
 }
 
 server.post('/register', (req, res) => {
-  const {username, email, password} = req.body;
+  const {surName,lastName, email,phonenumber,gender,dateofbirth, password} = req.body;
 
-  exist_user = db.users.findIndex(x => x.email === email)
+  exist_user = db.register.findIndex(x => x.email === email)
+  console.log(exist_user)
   if(exist_user !== -1) {
     return res.status(401).json({
       status: 401,
@@ -54,13 +55,17 @@ server.post('/register', (req, res) => {
 
   const new_user = {
     'id': db.users.length+1,
-    username,
+    surName,
+    lastName,
     email,
+    phonenumber,
+    gender,
+    dateofbirth,
     password
   }
 
   db.users.push(new_user);
-  fs.writeFileSync('./db.json', JSON.stringify(db), () => {
+  fs.writeFileSync('./database.json', JSON.stringify(db), () => {
     if (err) return console.log(err);
     console.log('writing to ' + fileName);
   })
@@ -155,7 +160,7 @@ server.delete('/auth/users/:email', (req, res) => {
   if(exist_email !== -1) {
     db.users.splice(exist_email, 1);
 
-    fs.writeFileSync('./db.json', JSON.stringify(db), () => {
+    fs.writeFileSync('./database.json', JSON.stringify(db), () => {
       if (err) return console.log(err);
       console.log('writing to ' + fileName);
     })
@@ -227,7 +232,7 @@ server.post('/auth/orders', (req, res) => {
     }
   
     db.orders.push(new_order);
-    fs.writeFileSync('./db.json', JSON.stringify(db), () => {
+    fs.writeFileSync('./database.json', JSON.stringify(db), () => {
       if (err) return console.log(err);
       console.log('writing to ' + fileName);
     })
@@ -252,7 +257,7 @@ server.delete('/auth/orders/:id', (req, res) => {
   if(exist_order !== -1) {
     db.orders.splice(exist_order, 1);
 
-    fs.writeFileSync('./db.json', JSON.stringify(db), () => {
+    fs.writeFileSync('./database.json', JSON.stringify(db), () => {
       if (err) return console.log(err);
       console.log('writing to ' + fileName);
     })
@@ -279,7 +284,7 @@ server.patch('/auth/orders/:id', (req, res) => {
   if(exist_order !== -1) {
     db.orders[exist_order].customerName = customerName
 
-    fs.writeFileSync('./db.json', JSON.stringify(db), () => {
+    fs.writeFileSync('./database.json', JSON.stringify(db), () => {
       if (err) return console.log(err);
       console.log('writing to ' + fileName);
     })
