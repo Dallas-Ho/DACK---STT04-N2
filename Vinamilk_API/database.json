@@ -69,35 +69,35 @@
             "id": 1,
             "productId": 4,
             "customerName": "viho",
-            "quantity": 1,
+            "quantity": 3,
             "timestamp": 1646659646883
         },
         {
             "id": 2,
             "productId": 3,
             "customerName": "hoangvinh",
-            "quantity": 1,
+            "quantity": 5,
             "timestamp": 1646668804485
         },
         {
             "id": 3,
             "productId": 4,
             "customerName": "thanhnhan",
-            "quantity": 1,
+            "quantity": 9,
             "timestamp": 1646669715314
         },
         {
             "id": 4,
             "productId": 1,
             "customerName": "vinh",
-            "quantity": 1,
+            "quantity": 6,
             "timestamp": 1646671696839
         },
         {
             "id": 5,
             "productId": 4,
             "customerName": "nhan",
-            "quantity": 1,
+            "quantity": 3,
             "timestamp": 1646671810134
         }
     ],
